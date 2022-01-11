@@ -1,3 +1,17 @@
+## [2.13.1](https://github.com/zendesk/copenhagen_theme/compare/v2.13.0...v2.13.1) (2021-12-14)
+
+
+### Bug Fixes
+
+* Remove navigation menu on request pages ([#287](https://github.com/zendesk/copenhagen_theme/issues/287)) ([dac0741](https://github.com/zendesk/copenhagen_theme/commit/dac074156fc88dbbe32ab8b2fbb1731e1e9c141b))
+
+# [2.13.0](https://github.com/zendesk/copenhagen_theme/compare/v2.12.2...v2.13.0) (2021-12-13)
+
+
+### Features
+
+* Mobile nav improvements and new menu items ([#285](https://github.com/zendesk/copenhagen_theme/issues/285)) ([1c851b0](https://github.com/zendesk/copenhagen_theme/commit/1c851b0aa4ccbe3f99378931df1de5ba9e34a9dc))
+
 ## [2.12.2](https://github.com/zendesk/copenhagen_theme/compare/v2.12.1...v2.12.2) (2021-11-24)
 
 
