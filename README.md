@@ -1,4 +1,4 @@
-This is the test of the GitHub theme cloning process!
+This is the test of the GitHub theme cloning process!  This is a branch for a new brand (Yellow Rose)!
 
 
 # Copenhagen Theme by Zendesk
