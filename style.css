@@ -2047,6 +2047,16 @@ ul {
   transform: rotate(0.5turn);
 }
 
+.article td > p:first-child,
+.article th > p:first-child {
+  margin-top: 0;
+}
+
+.article td > p:last-child,
+.article th > p:last-child {
+  margin-bottom: 0;
+}
+
 .sidenav-title {
   font-size: 15px;
   position: relative;
@@ -4615,6 +4625,39 @@ ul {
   unicode-bidi: embed;
 }
 
+.search-results-sidebar .sidenav-tag {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-grow: 0;
+}
+
+.search-results-sidebar .sidenav-tag .content-tag {
+  background: #E9EBED;
+  border-radius: 4px;
+  padding: 4px 12px;
+  text-decoration: none;
+}
+
+.search-results-sidebar .sidenav-tag .content-tag .label {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: -0.000427656px;
+  color: #49545C;
+  flex-grow: 0;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.search-results-sidebar .sidenav-tag .content-tag .close-icon {
+  color: #555555;
+  vertical-align: middle;
+  display: inline-block;
+}
+
 .search-results-sidebar .collapsible-sidebar {
   margin-bottom: 30px;
 }
@@ -4728,6 +4771,37 @@ ul {
 .search-results-description {
   margin-top: 10px;
   word-break: break-word;
+}
+
+.search-results .no-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4rem;
+}
+
+.search-results .no-results .headline {
+  color: #2F3941;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.45px;
+}
+
+.search-results .no-results .action-prompt {
+  color: #68737D;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.154px;
+}
+
+.search-results .no-results .action-prompt a {
+  color: #1F73B7;
+}
+
+.search-results .no-results .action-prompt a:visited {
+  color: #1F73B7;
 }
 
 .search-result-title {
@@ -5071,4 +5145,40 @@ html[dir="rtl"] .notification-left-aligned {
 
 .dropdown-chevron-icon {
   vertical-align: middle;
+}
+
+.content-tags > p {
+  color: #68737D;
+  margin-top: 32px;
+  margin-bottom: 4px;
+}
+
+.content-tags-add-hint {
+  color: #68737D;
+  font-size: 14px;
+}
+
+.content-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  word-break: break-word;
+}
+
+.content-tag-list li {
+  border-right: 1px solid #C2C8CC;
+  margin-bottom: 4px;
+}
+
+[dir="ltr"] .content-tag-list li {
+  padding-right: 8px;
+  margin-right: 8px;
+}
+
+[dir="rtl"] .content-tag-list li {
+  padding-left: 8px;
+  margin-left: 8px;
+}
+
+.content-tag-list li:last-child {
+  border: none;
 }

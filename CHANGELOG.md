@@ -1,3 +1,50 @@
+## [2.19.1](https://github.com/zendesk/copenhagen_theme/compare/v2.19.0...v2.19.1) (2022-10-13)
+
+
+### Bug Fixes
+
+* only close content tag with click on close icon ([7a1b18a](https://github.com/zendesk/copenhagen_theme/commit/7a1b18ab70643c4ea2e9a27a5d88188e50ff3c72))
+
+# [2.19.0](https://github.com/zendesk/copenhagen_theme/compare/v2.18.0...v2.19.0) (2022-09-28)
+
+
+### Features
+
+* always display content tag result when content tag shown ([e1cb369](https://github.com/zendesk/copenhagen_theme/commit/e1cb36953a7acb6577acb2feff23e473c733d0a9))
+* fix top padding for no results block ([33e55e3](https://github.com/zendesk/copenhagen_theme/commit/33e55e35499068a781c86c00880b6d0cc04ea3ee))
+* only display results for text when results are available ([98eb93d](https://github.com/zendesk/copenhagen_theme/commit/98eb93d102d9da60e41e589566f5426f754e16cd))
+* redesign no results search page ([51564a7](https://github.com/zendesk/copenhagen_theme/commit/51564a76f65eaad445aabf66717d0f638aeb8ef7))
+
+# [2.18.0](https://github.com/zendesk/copenhagen_theme/compare/v2.17.0...v2.18.0) (2022-09-12)
+
+
+### Features
+
+* add content tag filter to search results ([158e204](https://github.com/zendesk/copenhagen_theme/commit/158e2048acd8490d352570a8745959efcb5cde18))
+* change result head when content tag search ([007f9e6](https://github.com/zendesk/copenhagen_theme/commit/007f9e68658189d35ae1d37b987cfa742e931210))
+* fix variable name ([b46b7c8](https://github.com/zendesk/copenhagen_theme/commit/b46b7c8ebcc0961aadc68a7d864d7aa867fac985))
+
+# [2.17.0](https://github.com/zendesk/copenhagen_theme/compare/v2.16.3...v2.17.0) (2022-09-01)
+
+
+### Features
+
+* introduce content tags ([7e6ab58](https://github.com/zendesk/copenhagen_theme/commit/7e6ab58eaf5e234f84806500f0ea810d520e9d09))
+
+## [2.16.3](https://github.com/zendesk/copenhagen_theme/compare/v2.16.2...v2.16.3) (2022-08-22)
+
+
+### Bug Fixes
+
+* **article.scss:** Fix paragraph margins inside of table cells ([0307580](https://github.com/zendesk/copenhagen_theme/commit/03075808e2540866a14f90d2bc996be002253dbc))
+
+## [2.16.2](https://github.com/zendesk/copenhagen_theme/compare/v2.16.1...v2.16.2) (2022-07-28)
+
+
+### Bug Fixes
+
+* attempt to fix lighthouse check ([526a997](https://github.com/zendesk/copenhagen_theme/commit/526a9978b51ce5aa89fc85c347308ac6e9c7596e))
+
 ## [2.16.1](https://github.com/zendesk/copenhagen_theme/compare/v2.16.0...v2.16.1) (2022-07-12)
 
 
