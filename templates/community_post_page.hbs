@@ -1,6 +1,6 @@
 <div class="container-divider"></div>
 <div class="container">
-  <nav class="sub-nav">
+  <div class="sub-nav">
     {{breadcrumbs}}
     <div class="search-container">
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
@@ -9,12 +9,12 @@
       </svg>
       {{search scoped=settings.scoped_community_search submit=false}}
     </div>
-  </nav>
+  </div>
 
   <div class="post-container">
     <div class="post">
       <article id="main-content">
-        <header class="post-header">
+        <div class="post-header">
           <div class="post-title">
             <h1 title="{{post.title}}">
               {{post.title}}
@@ -43,14 +43,14 @@
               {{subscribe}}
             </div>
           {{/if}}
-        </header>
+        </div>
 
         <section class="post-info-container">
           <div class="post-info">
             <div class="post-author">
               <div class="avatar post-avatar">
                 {{#if post.author.agent}}
-                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="icon-agent" aria-label="{{t 'team_member' name=post.author.name}}">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" aria-hidden="true" viewBox="0 0 12 12" class="icon-agent" aria-label="{{t 'team_member' name=post.author.name}}">
                     <path fill="currentColor" d="M6 0C2.7 0 0 2.7 0 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm0 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm2.3 7H3.7c-.3 0-.4-.3-.3-.5C3.9 7.6 4.9 7 6 7s2.1.6 2.6 1.5c.1.2 0 .5-.3.5z"/>
                   </svg>
                 {{/if}}
@@ -63,49 +63,38 @@
                   {{/link}}
                 </span>
 
-                <span class="community-badge community-badge-titles">
+                <ul  aria-label="{{t 'badges'}}" class="community-badge-titles">
                   {{#each (filter post.author.badges on="category_slug" equals="titles")}}
-                    <div class="community-badge community-badge-title" title="{{description}}" aria-label="{{name}}">
+                    <li class="community-badge community-badge-title" title="{{description}}" aria-label="{{name}}">
                       {{name}}
-                    </div>
+                    </li>
                   {{/each}}
-                </span>
-
-                <ul class="meta-group meta-group-opposite">
-                  {{#if post.editor}}
-                    <li class="meta-data">{{date post.edited_at timeago=true}}</li>
-                    <li class="meta-data">{{t 'edited'}}</li>
-                  {{else}}
-                    <li class="meta-data">{{date post.created_at timeago=true}}</li>
-                  {{/if}}
                 </ul>
-                <div class="community-badge-container-achievements">
-                  {{#each (
-                    slice
-                      (
-                        filter
-                          (filter post.author.badges on="category_slug" equals="achievements")
-                          on="icon_url"
-                          starts_with="https"
-                      )
-                      0
-                      4
-                    )
-                  }}
-                    <div class="community-badge community-badge-achievements">
+
+                <div class="meta-group meta-group-opposite">
+                  {{#if post.editor}}
+                    <span class="meta-data">{{date post.edited_at timeago=true}}</span>
+                    <span class="meta-data">{{t 'edited'}}</span>
+                  {{else}}
+                    <span class="meta-data">{{date post.created_at timeago=true}}</span>
+                  {{/if}}
+                </div>
+                <ul aria-label="{{t 'badges'}}" class="community-badge-achievements">
+                  {{#each (slice (filter post.author.badges on="category_slug" equals="achievements") 0 4)}}
+                    <li class="community-badge community-badge-achievement">
                       <img src="{{icon_url}}" alt="{{name}}" title="{{name}} | {{description}}" />
-                    </div>
+                    </li>
                   {{/each}}
 
                   {{#if (compare (calc post.author.badges.length "-" 4) ">" 0)}}
-                    <div class="community-badge community-badge-achievements">
+                    <li class="community-badge community-badge-achievement">
                       <a href="{{page_path "user_profile" id=post.author.id filter_by="badges"}}" class="community-badge-achievements-rest"  aria-label="{{t 'more_awards_to' count=(calc post.author.badges.length "-" 4) name=post.author.name}}">
                         {{t 'plus_more' count=(calc post.author.badges.length "-" 4)}}
                       </a>
-                    </div>
+                    </li>
                   {{/if}}
 
-                </div>
+                </ul>
               </div>
 
               {{#if post.pending}}
@@ -130,7 +119,7 @@
                 <ul class="content-tag-list">
                   {{#each post.content_tags}}
                     <li class="content-tag-item" data-content-tag-id="{{id}}">
-                      {{#link "search_result" content_tag_id=id target="_blank"}}
+                      {{#link "search_result" content_tag_id=id}}
                         {{name}}
                       {{/link}}
                     </li>
@@ -200,7 +189,7 @@
             </button>
             <span class="dropdown-menu" role="menu">
               {{#each comment_sorters}}
-                <a aria-selected="{{selected}}" href="{{url}}" role="menuitem">{{name}}</a>
+                <a aria-checked="{{selected}}" href="{{url}}" role="menuitemradio">{{name}}</a>
               {{/each}}
             </span>
           </div>
@@ -219,62 +208,51 @@
                 <div class="comment-author">
                   <div class="avatar comment-avatar">
                     {{#if author.agent}}
-                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="icon-agent" aria-label="{{t 'team_member' name=author.name}}">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" aria-hidden="true" viewBox="0 0 12 12" class="icon-agent" aria-label="{{t 'team_member' name=author.name}}">
                         <path fill="currentColor" d="M6 0C2.7 0 0 2.7 0 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm0 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm2.3 7H3.7c-.3 0-.4-.3-.3-.5C3.9 7.6 4.9 7 6 7s2.1.6 2.6 1.5c.1.2 0 .5-.3.5z"/>
                       </svg>
                     {{/if}}
                     <img src="{{author.avatar_url}}" alt="" class="user-avatar"/>
                   </div>
                   <div class="comment-meta">
-                    <span title="{{author.name}}">
+                    <span title="{{author.name}}" id="{{anchor}}-author">
                       {{#link 'user_profile' id=author.id}}
                         {{author.name}}
                       {{/link}}
                     </span>
 
-                    <span aria-label="{{t 'badges'}}" class="community-badge community-badge-titles">
+                    <ul aria-label="{{t 'badges'}}" class="community-badge-titles">
                       {{#each (filter author.badges on="category_slug" equals="titles")}}
-                        <div class="community-badge community-badge-title" title="{{description}}" aria-label="{{name}}">
+                        <li class="community-badge community-badge-title" title="{{description}}" aria-label="{{name}}">
                           {{name}}
-                        </div>
+                        </li>
                       {{/each}}
-                    </span>
-
-                    <ul class="meta-group meta-group-opposite">
-                      {{#if editor}}
-                        <li class="meta-data">{{date edited_at timeago=true}}</li>
-                        <li class="meta-data">{{t 'edited'}}</li>
-                      {{else}}
-                        <li class="meta-data">{{date created_at timeago=true}}</li>
-                      {{/if}}
                     </ul>
 
-                    <div aria-label="{{t 'badges'}}" class="community-badge-container-achievements">
-                      {{#each (
-                        slice
-                          (
-                            filter
-                              (filter author.badges on="category_slug" equals="achievements")
-                              on="icon_url"
-                              starts_with="https"
-                          )
-                          0
-                          4
-                        )
-                      }}
-                        <div class="community-badge community-badge-achievements">
+                    <div class="meta-group meta-group-opposite">
+                      {{#if editor}}
+                        <span class="meta-data">{{date edited_at timeago=true}}</span>
+                        <span class="meta-data">{{t 'edited'}}</span>
+                      {{else}}
+                        <span class="meta-data">{{date created_at timeago=true}}</span>
+                      {{/if}}
+                    </div>
+
+                    <ul aria-label="{{t 'badges'}}" class="community-badge-achievements">
+                      {{#each (slice (filter author.badges on="category_slug" equals="achievements") 0 4)}}
+                        <li class="community-badge community-badge-achievement">
                           <img src="{{icon_url}}" alt="{{name}}" title="{{name}} | {{description}}" />
-                        </div>
+                        </li>
                       {{/each}}
 
                       {{#if (compare (calc author.badges.length "-" 4) ">" 0)}}
-                        <div class="community-badge community-badge-achievements">
+                        <li class="community-badge community-badge-achievement">
                           <a href="{{page_path "user_profile" id=author.id filter_by="badges"}}" class="community-badge-achievements-rest"  aria-label="{{t 'more_awards_to' count=(calc author.badges.length "-" 4) name=author.name}}">
                             {{t 'plus_more' count=(calc author.badges.length "-" 4)}}
                           </a>
-                        </div>
+                        </li>
                       {{/if}}
-                    </div>
+                    </ul>
 
                   </div>
                   <div class="comment-labels">
@@ -289,19 +267,19 @@
                   </div>
                 </div>
 
-                <section class="comment-body">{{body}}</section>
+                <section class="comment-body" id="{{anchor}}-body">{{body}}</section>
               </div>
 
               <div class="comment-actions-container">
                 {{#unless official}}
                   <div class="comment-vote vote" role="group">
-                    {{#vote 'up' role='radio' class='vote-up' selected_class='vote-voted'}}
+                    {{#vote 'up' class='vote-up' selected_class='vote-voted' aria-describedby=(concat anchor "-author " anchor "-body")}}
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16">
                       <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M4 6.5l3.6 3.6c.2.2.5.2.7 0L12 6.5"/>
                     </svg>
                     {{/vote}}
                     {{vote 'sum' class='vote-sum'}}
-                    {{#vote 'down' role='radio' class='vote-down' selected_class='vote-voted'}}
+                    {{#vote 'down' class='vote-down' selected_class='vote-voted' aria-describedby=(concat anchor "-author " anchor "-body")}}
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16">
                       <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M4 6.5l3.6 3.6c.2.2.5.2.7 0L12 6.5"/>
                     </svg>
@@ -325,7 +303,7 @@
       {{pagination}}
 
       <section class="post-comments">
-        {{#form 'comment' class='comment-form'}}
+        {{#form 'comment' class='comment-form hbs-form'}}
           <div class="avatar comment-avatar">
             {{user_avatar class='user-avatar'}}
           </div>
