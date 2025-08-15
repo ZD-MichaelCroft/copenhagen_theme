@@ -9,37 +9,68 @@
             "label": "Brand",
             "variables": [
                 {
-                    "id": "color_brand_red",
+                    "identifier": "logo",
+                    "type": "file",
+                    "label": "Logo"
+                },
+                {
+                    "identifier": "favicon",
+                    "type": "file",
+                    "label": "Favicon"
+                },
+                {
+                    "identifier": "hero_image",
+                    "type": "file",
+                    "label": "Hero Image"
+                },
+                {
+                    "identifier": "arches_watermark",
+                    "type": "file",
+                    "label": "Arches Watermark (SVG/PNG, optional)"
+                },
+                {
+                    "identifier": "use_arches_watermark",
+                    "type": "checkbox",
+                    "label": "Show arches watermark in hero",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "label": "Colors",
+            "variables": [
+                {
+                    "identifier": "color_brand_red",
                     "type": "color",
                     "label": "Brand Red",
                     "value": "#DA291C"
                 },
                 {
-                    "id": "color_brand_yellow",
+                    "identifier": "color_brand_yellow",
                     "type": "color",
                     "label": "Brand Yellow",
                     "value": "#FFC72C"
                 },
                 {
-                    "id": "color_text_primary",
+                    "identifier": "color_text_primary",
                     "type": "color",
                     "label": "Primary Text",
                     "value": "#27251F"
                 },
                 {
-                    "id": "color_surface",
+                    "identifier": "color_surface",
                     "type": "color",
                     "label": "Surface (Background)",
                     "value": "#FFFFFF"
                 },
                 {
-                    "id": "color_surface_alt",
+                    "identifier": "color_surface_alt",
                     "type": "color",
                     "label": "Surface Alt (Cards/Stripes)",
                     "value": "#FFF8E1"
                 },
                 {
-                    "id": "color_link",
+                    "identifier": "color_link",
                     "type": "color",
                     "label": "Link Color",
                     "value": "#DA291C"
@@ -50,42 +81,16 @@
             "label": "Typography",
             "variables": [
                 {
-                    "id": "font_family_custom_url",
+                    "identifier": "font_family_custom_url",
                     "type": "text",
                     "label": "Custom Brand Webfont URL (optional)",
                     "value": ""
                 },
                 {
-                    "id": "font_family_stack",
+                    "identifier": "font_family_stack",
                     "type": "text",
                     "label": "Font Stack",
-                    "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-                }
-            ]
-        },
-        {
-            "label": "Logo & Imagery",
-            "variables": [
-                {
-                    "id": "brand_logo",
-                    "type": "image",
-                    "label": "Brand Logo"
-                },
-                {
-                    "id": "hero_image",
-                    "type": "image",
-                    "label": "Hero Image"
-                },
-                {
-                    "id": "arches_watermark",
-                    "type": "image",
-                    "label": "Arches Watermark (SVG/PNG, optional)"
-                },
-                {
-                    "id": "use_arches_watermark",
-                    "type": "checkbox",
-                    "label": "Show arches watermark in hero",
-                    "value": true
+                    "value": "'Speedee Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif"
                 }
             ]
         },
@@ -93,13 +98,13 @@
             "label": "Layout",
             "variables": [
                 {
-                    "id": "sticky_header",
+                    "identifier": "sticky_header",
                     "type": "checkbox",
                     "label": "Sticky header on scroll",
                     "value": true
                 },
                 {
-                    "id": "rounded_cards",
+                    "identifier": "rounded_cards",
                     "type": "checkbox",
                     "label": "Rounded cards",
                     "value": true
@@ -110,79 +115,79 @@
             "label": "McDonald's Network Links",
             "variables": [
                 {
-                    "id": "show_network_links",
+                    "identifier": "show_network_links",
                     "type": "checkbox",
                     "label": "Show Network Links section",
                     "value": true
                 },
                 {
-                    "id": "network_link_1_label",
+                    "identifier": "network_link_1_label",
                     "type": "text",
                     "label": "Link 1 Label",
                     "value": "McDonald's USA"
                 },
                 {
-                    "id": "network_link_1_url",
+                    "identifier": "network_link_1_url",
                     "type": "text",
                     "label": "Link 1 URL",
                     "value": "https://www.mcdonalds.com/us/en-us.html"
                 },
                 {
-                    "id": "network_link_2_label",
+                    "identifier": "network_link_2_label",
                     "type": "text",
                     "label": "Link 2 Label",
                     "value": "Mobile App"
                 },
                 {
-                    "id": "network_link_2_url",
+                    "identifier": "network_link_2_url",
                     "type": "text",
                     "label": "Link 2 URL",
                     "value": "https://www.mcdonalds.com/us/en-us/mcdonalds-app.html"
                 },
                 {
-                    "id": "network_link_3_label",
+                    "identifier": "network_link_3_label",
                     "type": "text",
                     "label": "Link 3 Label",
                     "value": "Careers"
                 },
                 {
-                    "id": "network_link_3_url",
+                    "identifier": "network_link_3_url",
                     "type": "text",
                     "label": "Link 3 URL",
                     "value": "https://careers.mcdonalds.com/"
                 },
                 {
-                    "id": "network_link_4_label",
+                    "identifier": "network_link_4_label",
                     "type": "text",
                     "label": "Link 4 Label",
                     "value": "Deals"
                 },
                 {
-                    "id": "network_link_4_url",
+                    "identifier": "network_link_4_url",
                     "type": "text",
                     "label": "Link 4 URL",
                     "value": "https://www.mcdonalds.com/us/en-us/deals.html"
                 },
                 {
-                    "id": "network_link_5_label",
+                    "identifier": "network_link_5_label",
                     "type": "text",
                     "label": "Link 5 Label",
                     "value": "Nutrition Calculator"
                 },
                 {
-                    "id": "network_link_5_url",
+                    "identifier": "network_link_5_url",
                     "type": "text",
                     "label": "Link 5 URL",
                     "value": "https://www.mcdonalds.com/us/en-us/about-our-food/nutrition-calculator.html"
                 },
                 {
-                    "id": "network_link_6_label",
+                    "identifier": "network_link_6_label",
                     "type": "text",
                     "label": "Link 6 Label",
                     "value": "Corporate"
                 },
                 {
-                    "id": "network_link_6_url",
+                    "identifier": "network_link_6_url",
                     "type": "text",
                     "label": "Link 6 URL",
                     "value": "https://corporate.mcdonalds.com/"
