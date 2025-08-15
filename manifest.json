@@ -6,7 +6,7 @@
     "default_locale": "en-us",
     "settings": [
         {
-            "name": "Brand",
+            "label": "Brand",
             "settings": [
                 {
                     "id": "color_brand_red",
@@ -47,7 +47,7 @@
             ]
         },
         {
-            "name": "Typography",
+            "label": "Typography",
             "settings": [
                 {
                     "id": "font_family_custom_url",
@@ -59,12 +59,12 @@
                     "id": "font_family_stack",
                     "type": "text",
                     "label": "Font Stack",
-                    "value": "\"Segoe UI\",\"Inter\",\"Helvetica Neue\",Arial,sans-serif"
+                    "value": "Segoe UI,Inter,Helvetica Neue,Arial,sans-serif"
                 }
             ]
         },
         {
-            "name": "Logo & Imagery",
+            "label": "Logo & Imagery",
             "settings": [
                 {
                     "id": "brand_logo",
@@ -90,7 +90,7 @@
             ]
         },
         {
-            "name": "Layout",
+            "label": "Layout",
             "settings": [
                 {
                     "id": "sticky_header",
@@ -107,7 +107,7 @@
             ]
         },
         {
-            "name": "McDonald's Network Links",
+            "label": "McDonald's Network Links",
             "settings": [
                 {
                     "id": "show_network_links",
