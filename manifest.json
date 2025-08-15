@@ -1,331 +1,91 @@
 {
-    "name": "McDonald's Help Center (Copenhagen Base)",
-    "author": "Your Team",
-    "version": "1.0.0",
-    "api_version": 4,
-    "default_locale": "en-us",
-    "settings": [
-        {
-            "label": "Brand",
-            "variables": [
-                {
-                    "identifier": "logo",
-                    "type": "file",
-                    "label": "Logo",
-                    "value": "settings/logo.png"
-                },
-                {
-                    "identifier": "favicon",
-                    "type": "file",
-                    "label": "Favicon",
-                    "value": "settings/favicon.png"
-                },
-                {
-                    "identifier": "hero_image",
-                    "type": "file",
-                    "label": "Hero Image",
-                    "value": "settings/hero_image.jpg"
-                },
-                {
-                    "identifier": "arches_watermark",
-                    "type": "file",
-                    "label": "Arches Watermark (SVG/PNG)",
-                    "value": "settings/arches_watermark.svg"
-                },
-                {
-                    "identifier": "use_arches_watermark",
-                    "type": "checkbox",
-                    "label": "Show arches watermark in hero",
-                    "value": true
-                }
-            ]
-        },
-        {
-            "label": "Colors",
-            "variables": [
-                {
-                    "identifier": "brand_color",
-                    "type": "color",
-                    "label": "Brand color",
-                    "value": "#DA291C"
-                },
-                {
-                    "identifier": "text_color",
-                    "type": "color",
-                    "label": "Text color",
-                    "value": "#27251F"
-                },
-                {
-                    "identifier": "background_color",
-                    "type": "color",
-                    "label": "Background color",
-                    "value": "#FFFFFF"
-                },
-                {
-                    "identifier": "link_color",
-                    "type": "color",
-                    "label": "Link color",
-                    "value": "#DA291C"
-                },
-                {
-                    "identifier": "visited_link_color",
-                    "type": "color",
-                    "label": "Visited link color",
-                    "value": "#9E1D15"
-                },
-                {
-                    "identifier": "color_brand_red",
-                    "type": "color",
-                    "label": "Brand Red",
-                    "value": "#DA291C"
-                },
-                {
-                    "identifier": "color_brand_yellow",
-                    "type": "color",
-                    "label": "Brand Yellow",
-                    "value": "#FFC72C"
-                },
-                {
-                    "identifier": "color_text_primary",
-                    "type": "color",
-                    "label": "Primary Text",
-                    "value": "#27251F"
-                },
-                {
-                    "identifier": "color_surface",
-                    "type": "color",
-                    "label": "Surface (Background)",
-                    "value": "#FFFFFF"
-                },
-                {
-                    "identifier": "color_surface_alt",
-                    "type": "color",
-                    "label": "Surface Alt (Cards/Stripes)",
-                    "value": "#FFF8E1"
-                },
-                {
-                    "identifier": "color_link",
-                    "type": "color",
-                    "label": "Link Color",
-                    "value": "#DA291C"
-                }
-            ]
-        },
-        {
-            "label": "Typography",
-            "variables": [
-                {
-                    "identifier": "font_family_custom_url",
-                    "type": "text",
-                    "label": "Custom Brand Webfont URL (optional)",
-                    "value": ""
-                },
-                {
-                    "identifier": "font_family_stack",
-                    "type": "text",
-                    "label": "Font Stack",
-                    "value": "'Speedee Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif"
-                }
-            ]
-        },
-        {
-            "label": "Layout",
-            "variables": [
-                {
-                    "identifier": "sticky_header",
-                    "type": "checkbox",
-                    "label": "Sticky header on scroll",
-                    "value": true
-                },
-                {
-                    "identifier": "rounded_cards",
-                    "type": "checkbox",
-                    "label": "Rounded cards",
-                    "value": true
-                }
-            ]
-        },
-        {
-            "label": "Knowledge Base & Community",
-            "variables": [
-                {
-                    "identifier": "scoped_kb_search",
-                    "type": "checkbox",
-                    "label": "Scope KB Search to current category/section",
-                    "value": false
-                },
-                {
-                    "identifier": "scoped_community_search",
-                    "type": "checkbox",
-                    "label": "Scope Community Search to current topic",
-                    "value": false
-                },
-                {
-                    "identifier": "show_follow_section",
-                    "type": "checkbox",
-                    "label": "Show Follow button on section page",
-                    "value": true
-                },
-                {
-                    "identifier": "show_follow_topic",
-                    "type": "checkbox",
-                    "label": "Show Follow button on community topic page",
-                    "value": true
-                },
-                {
-                    "identifier": "show_follow_post",
-                    "type": "checkbox",
-                    "label": "Show Follow button on community post page",
-                    "value": true
-                },
-                {
-                    "identifier": "show_post_sharing",
-                    "type": "checkbox",
-                    "label": "Show share controls on community posts",
-                    "value": true
-                }
-            ]
-        },
-        {
-            "label": "Article Settings",
-            "variables": [
-                {
-                    "identifier": "show_articles_in_section",
-                    "type": "checkbox",
-                    "label": "Show article list in section sidebar",
-                    "value": true
-                },
-                {
-                    "identifier": "show_article_author",
-                    "type": "checkbox",
-                    "label": "Show article author",
-                    "value": true
-                },
-                {
-                    "identifier": "show_follow_article",
-                    "type": "checkbox",
-                    "label": "Show Follow button on article page",
-                    "value": true
-                },
-                {
-                    "identifier": "show_article_sharing",
-                    "type": "checkbox",
-                    "label": "Show share controls on articles",
-                    "value": true
-                },
-                {
-                    "identifier": "show_article_comments",
-                    "type": "checkbox",
-                    "label": "Show article comments",
-                    "value": true
-                },
-                {
-                    "identifier": "show_recently_viewed_articles",
-                    "type": "checkbox",
-                    "label": "Show Recently Viewed",
-                    "value": true
-                },
-                {
-                    "identifier": "show_related_articles",
-                    "type": "checkbox",
-                    "label": "Show Related Articles",
-                    "value": true
-                }
-            ]
-        },
-        {
-            "label": "Requests",
-            "variables": [
-                {
-                    "identifier": "request_list_beta",
-                    "type": "checkbox",
-                    "label": "Use requests list beta",
-                    "value": false
-                }
-            ]
-        },
-        {
-            "label": "McDonald's Network Links",
-            "variables": [
-                {
-                    "identifier": "show_network_links",
-                    "type": "checkbox",
-                    "label": "Show Network Links section",
-                    "value": true
-                },
-                {
-                    "identifier": "network_link_1_label",
-                    "type": "text",
-                    "label": "Link 1 Label",
-                    "value": "McDonald's USA"
-                },
-                {
-                    "identifier": "network_link_1_url",
-                    "type": "text",
-                    "label": "Link 1 URL",
-                    "value": "https://www.mcdonalds.com/us/en-us.html"
-                },
-                {
-                    "identifier": "network_link_2_label",
-                    "type": "text",
-                    "label": "Link 2 Label",
-                    "value": "Mobile App"
-                },
-                {
-                    "identifier": "network_link_2_url",
-                    "type": "text",
-                    "label": "Link 2 URL",
-                    "value": "https://www.mcdonalds.com/us/en-us/mcdonalds-app.html"
-                },
-                {
-                    "identifier": "network_link_3_label",
-                    "type": "text",
-                    "label": "Link 3 Label",
-                    "value": "Careers"
-                },
-                {
-                    "identifier": "network_link_3_url",
-                    "type": "text",
-                    "label": "Link 3 URL",
-                    "value": "https://careers.mcdonalds.com/"
-                },
-                {
-                    "identifier": "network_link_4_label",
-                    "type": "text",
-                    "label": "Link 4 Label",
-                    "value": "Deals"
-                },
-                {
-                    "identifier": "network_link_4_url",
-                    "type": "text",
-                    "label": "Link 4 URL",
-                    "value": "https://www.mcdonalds.com/us/en-us/deals.html"
-                },
-                {
-                    "identifier": "network_link_5_label",
-                    "type": "text",
-                    "label": "Link 5 Label",
-                    "value": "Nutrition Calculator"
-                },
-                {
-                    "identifier": "network_link_5_url",
-                    "type": "text",
-                    "label": "Link 5 URL",
-                    "value": "https://www.mcdonalds.com/us/en-us/about-our-food/nutrition-calculator.html"
-                },
-                {
-                    "identifier": "network_link_6_label",
-                    "type": "text",
-                    "label": "Link 6 Label",
-                    "value": "Corporate"
-                },
-                {
-                    "identifier": "network_link_6_url",
-                    "type": "text",
-                    "label": "Link 6 URL",
-                    "value": "https://corporate.mcdonalds.com/"
-                }
-            ]
-        }
-    ]
+"name": "McDonald's Help Center (Copenhagen Base)",
+"author": "Your Team",
+"version": "1.0.0",
+"api_version": 4,
+"default_locale": "en-us",
+"settings": [
+{
+"label": "Brand",
+"variables": [
+{ "identifier": "logo", "type": "file", "label": "Logo" },
+{ "identifier": "favicon", "type": "file", "label": "Favicon" },
+{ "identifier": "hero_image", "type": "file", "label": "Hero Image" },
+{ "identifier": "arches_watermark", "type": "file", "label": "Arches Watermark" },
+{ "identifier": "use_arches_watermark", "type": "checkbox", "label": "Show arches watermark in hero", "value": true }
+]
+},
+{
+"label": "Colors",
+"variables": [
+{ "identifier": "brand_color", "type": "color", "label": "Brand color", "value": "#DA291C" },
+{ "identifier": "text_color", "type": "color", "label": "Text color", "value": "#27251F" },
+{ "identifier": "background_color", "type": "color", "label": "Background color", "value": "#FFFFFF" },
+{ "identifier": "link_color", "type": "color", "label": "Link color", "value": "#DA291C" },
+{ "identifier": "visited_link_color", "type": "color", "label": "Visited link color", "value": "#9E1D15" },
+{ "identifier": "color_brand_yellow", "type": "color", "label": "Accent Yellow", "value": "#FFC72C" }
+]
+},
+{
+"label": "Typography",
+"variables": [
+{ "identifier": "font_family_custom_url", "type": "text", "label": "Custom Brand Webfont URL (optional)", "value": "" },
+{ "identifier": "font_family_stack", "type": "text", "label": "Font Stack", "value": "'Speedee Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif" }
+]
+},
+{
+"label": "Layout",
+"variables": [
+{ "identifier": "sticky_header", "type": "checkbox", "label": "Sticky header on scroll", "value": true },
+{ "identifier": "rounded_cards", "type": "checkbox", "label": "Rounded cards", "value": true }
+]
+},
+{
+"label": "Knowledge Base & Community",
+"variables": [
+{ "identifier": "scoped_kb_search", "type": "checkbox", "label": "Scope KB Search to current category/section", "value": false },
+{ "identifier": "scoped_community_search", "type": "checkbox", "label": "Scope Community Search to current topic", "value": false },
+{ "identifier": "show_follow_section", "type": "checkbox", "label": "Show Follow button on section page", "value": true },
+{ "identifier": "show_follow_topic", "type": "checkbox", "label": "Show Follow button on community topic page", "value": true },
+{ "identifier": "show_follow_post", "type": "checkbox", "label": "Show Follow button on community post page", "value": true },
+{ "identifier": "show_post_sharing", "type": "checkbox", "label": "Show share controls on community posts", "value": true }
+]
+},
+{
+"label": "Article Settings",
+"variables": [
+{ "identifier": "show_articles_in_section", "type": "checkbox", "label": "Show article list in section sidebar", "value": true },
+{ "identifier": "show_article_author", "type": "checkbox", "label": "Show article author", "value": true },
+{ "identifier": "show_follow_article", "type": "checkbox", "label": "Show Follow button on article page", "value": true },
+{ "identifier": "show_article_sharing", "type": "checkbox", "label": "Show share controls on articles", "value": true },
+{ "identifier": "show_article_comments", "type": "checkbox", "label": "Show article comments", "value": true },
+{ "identifier": "show_recently_viewed_articles", "type": "checkbox", "label": "Show Recently Viewed", "value": true },
+{ "identifier": "show_related_articles", "type": "checkbox", "label": "Show Related Articles", "value": true }
+]
+},
+{
+"label": "Requests",
+"variables": [
+{ "identifier": "request_list_beta", "type": "checkbox", "label": "Use requests list beta", "value": false }
+]
+},
+{
+"label": "McDonald's Network Links",
+"variables": [
+{ "identifier": "show_network_links", "type": "checkbox", "label": "Show Network Links section", "value": true },
+{ "identifier": "network_link_1_label", "type": "text", "label": "Link 1 Label", "value": "McDonald's USA" },
+{ "identifier": "network_link_1_url", "type": "text", "label": "Link 1 URL", "value": "https://www.mcdonalds.com/us/en-us.html" },
+{ "identifier": "network_link_2_label", "type": "text", "label": "Link 2 Label", "value": "Mobile App" },
+{ "identifier": "network_link_2_url", "type": "text", "label": "Link 2 URL", "value": "https://www.mcdonalds.com/us/en-us/mcdonalds-app.html" },
+{ "identifier": "network_link_3_label", "type": "text", "label": "Link 3 Label", "value": "Careers" },
+{ "identifier": "network_link_3_url", "type": "text", "label": "Link 3 URL", "value": "https://careers.mcdonalds.com/" },
+{ "identifier": "network_link_4_label", "type": "text", "label": "Link 4 Label", "value": "Deals" },
+{ "identifier": "network_link_4_url", "type": "text", "label": "Link 4 URL", "value": "https://www.mcdonalds.com/us/en-us/deals.html" },
+{ "identifier": "network_link_5_label", "type": "text", "label": "Link 5 Label", "value": "Nutrition Calculator" },
+{ "identifier": "network_link_5_url", "type": "text", "label": "Link 5 URL", "value": "https://www.mcdonalds.com/us/en-us/about-our-food/nutrition-calculator.html" },
+{ "identifier": "network_link_6_label", "type": "text", "label": "Link 6 Label", "value": "Corporate" },
+{ "identifier": "network_link_6_url", "type": "text", "label": "Link 6 URL", "value": "https://corporate.mcdonalds.com/" }
+]
+}
+]
 }
