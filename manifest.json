@@ -1,26 +1,193 @@
 {
-  "name": "McDonald's Help Center (Copenhagen Base)",
-  "author": "Your Team",
-  "version": "1.0.0",
-  "api_version": 2,
-  "default_locale": "en-us",
-  "settings": [    {      "name": "Brand",      "settings": [        { "id": "color_brand_red", "type": "color", "label": "Brand Red", "value": "#DA291C" },        { "id": "color_brand_yellow", "type": "color", "label": "Brand Yellow", "value": "#FFC72C" },        { "id": "color_text_primary", "type": "color", "label": "Primary Text", "value": "#27251F" },        { "id": "color_surface", "type": "color", "label": "Surface (Background)", "value": "#FFFFFF" },        { "id": "color_surface_alt", "type": "color", "label": "Surface Alt (Cards/Stripes)", "value": "#FFF8E1" },        { "id": "color_link", "type": "color", "label": "Link Color", "value": "#DA291C" }      ]
-    },
-    {
-      "name": "Typography",
-      "settings": [        { "id": "font_family_custom_url", "type": "text", "label": "Custom Brand Webfont URL (optional)", "value": "" },        { "id": "font_family_stack", "type": "text", "label": "Font Stack", "value": "\"Segoe UI\",\"Inter\",\"Helvetica Neue\",Arial,sans-serif" }      ]
-    },
-    {
-      "name": "Logo & Imagery",
-      "settings": [        { "id": "brand_logo", "type": "image", "label": "Brand Logo" },        { "id": "hero_image", "type": "image", "label": "Hero Image" },        { "id": "arches_watermark", "type": "image", "label": "Arches Watermark (SVG/PNG, optional)" },        { "id": "use_arches_watermark", "type": "checkbox", "label": "Show arches watermark in hero", "value": true }      ]
-    },
-    {
-      "name": "Layout",
-      "settings": [        { "id": "sticky_header", "type": "checkbox", "label": "Sticky header on scroll", "value": true },        { "id": "rounded_cards", "type": "checkbox", "label": "Rounded cards", "value": true }      ]
-    },
-    {
-      "name": "McDonald's Network Links",
-      "settings": [        { "id": "show_network_links", "type": "checkbox", "label": "Show Network Links section", "value": true },        { "id": "network_link_1_label", "type": "text", "label": "Link 1 Label", "value": "McDonald's USA" },        { "id": "network_link_1_url",   "type": "text", "label": "Link 1 URL",   "value": "https://www.mcdonalds.com/us/en-us.html" },        { "id": "network_link_2_label", "type": "text", "label": "Link 2 Label", "value": "Mobile App" },        { "id": "network_link_2_url",   "type": "text", "label": "Link 2 URL",   "value": "https://www.mcdonalds.com/us/en-us/mcdonalds-app.html" },        { "id": "network_link_3_label", "type": "text", "label": "Link 3 Label", "value": "Careers" },        { "id": "network_link_3_url",   "type": "text", "label": "Link 3 URL",   "value": "https://careers.mcdonalds.com/" },        { "id": "network_link_4_label", "type": "text", "label": "Link 4 Label", "value": "Deals" },        { "id": "network_link_4_url",   "type": "text", "label": "Link 4 URL",   "value": "https://www.mcdonalds.com/us/en-us/deals.html" },        { "id": "network_link_5_label", "type": "text", "label": "Link 5 Label", "value": "Nutrition Calculator" },        { "id": "network_link_5_url",   "type": "text", "label": "Link 5 URL",   "value": "https://www.mcdonalds.com/us/en-us/about-our-food/nutrition-calculator.html" },        { "id": "network_link_6_label", "type": "text", "label": "Link 6 Label", "value": "Corporate" },        { "id": "network_link_6_url",   "type": "text", "label": "Link 6 URL",   "value": "https://corporate.mcdonalds.com/" }      ]
-    }
-  ]
+    "name": "McDonald's Help Center (Copenhagen Base)",
+    "author": "Your Team",
+    "version": "1.0.0",
+    "api_version": 2,
+    "default_locale": "en-us",
+    "settings": [
+        {
+            "name": "Brand",
+            "settings": [
+                {
+                    "id": "color_brand_red",
+                    "type": "color",
+                    "label": "Brand Red",
+                    "value": "#DA291C"
+                },
+                {
+                    "id": "color_brand_yellow",
+                    "type": "color",
+                    "label": "Brand Yellow",
+                    "value": "#FFC72C"
+                },
+                {
+                    "id": "color_text_primary",
+                    "type": "color",
+                    "label": "Primary Text",
+                    "value": "#27251F"
+                },
+                {
+                    "id": "color_surface",
+                    "type": "color",
+                    "label": "Surface (Background)",
+                    "value": "#FFFFFF"
+                },
+                {
+                    "id": "color_surface_alt",
+                    "type": "color",
+                    "label": "Surface Alt (Cards/Stripes)",
+                    "value": "#FFF8E1"
+                },
+                {
+                    "id": "color_link",
+                    "type": "color",
+                    "label": "Link Color",
+                    "value": "#DA291C"
+                }
+            ]
+        },
+        {
+            "name": "Typography",
+            "settings": [
+                {
+                    "id": "font_family_custom_url",
+                    "type": "text",
+                    "label": "Custom Brand Webfont URL (optional)",
+                    "value": ""
+                },
+                {
+                    "id": "font_family_stack",
+                    "type": "text",
+                    "label": "Font Stack",
+                    "value": "\"Segoe UI\",\"Inter\",\"Helvetica Neue\",Arial,sans-serif"
+                }
+            ]
+        },
+        {
+            "name": "Logo & Imagery",
+            "settings": [
+                {
+                    "id": "brand_logo",
+                    "type": "image",
+                    "label": "Brand Logo"
+                },
+                {
+                    "id": "hero_image",
+                    "type": "image",
+                    "label": "Hero Image"
+                },
+                {
+                    "id": "arches_watermark",
+                    "type": "image",
+                    "label": "Arches Watermark (SVG/PNG, optional)"
+                },
+                {
+                    "id": "use_arches_watermark",
+                    "type": "checkbox",
+                    "label": "Show arches watermark in hero",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "name": "Layout",
+            "settings": [
+                {
+                    "id": "sticky_header",
+                    "type": "checkbox",
+                    "label": "Sticky header on scroll",
+                    "value": true
+                },
+                {
+                    "id": "rounded_cards",
+                    "type": "checkbox",
+                    "label": "Rounded cards",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "name": "McDonald's Network Links",
+            "settings": [
+                {
+                    "id": "show_network_links",
+                    "type": "checkbox",
+                    "label": "Show Network Links section",
+                    "value": true
+                },
+                {
+                    "id": "network_link_1_label",
+                    "type": "text",
+                    "label": "Link 1 Label",
+                    "value": "McDonald's USA"
+                },
+                {
+                    "id": "network_link_1_url",
+                    "type": "text",
+                    "label": "Link 1 URL",
+                    "value": "https://www.mcdonalds.com/us/en-us.html"
+                },
+                {
+                    "id": "network_link_2_label",
+                    "type": "text",
+                    "label": "Link 2 Label",
+                    "value": "Mobile App"
+                },
+                {
+                    "id": "network_link_2_url",
+                    "type": "text",
+                    "label": "Link 2 URL",
+                    "value": "https://www.mcdonalds.com/us/en-us/mcdonalds-app.html"
+                },
+                {
+                    "id": "network_link_3_label",
+                    "type": "text",
+                    "label": "Link 3 Label",
+                    "value": "Careers"
+                },
+                {
+                    "id": "network_link_3_url",
+                    "type": "text",
+                    "label": "Link 3 URL",
+                    "value": "https://careers.mcdonalds.com/"
+                },
+                {
+                    "id": "network_link_4_label",
+                    "type": "text",
+                    "label": "Link 4 Label",
+                    "value": "Deals"
+                },
+                {
+                    "id": "network_link_4_url",
+                    "type": "text",
+                    "label": "Link 4 URL",
+                    "value": "https://www.mcdonalds.com/us/en-us/deals.html"
+                },
+                {
+                    "id": "network_link_5_label",
+                    "type": "text",
+                    "label": "Link 5 Label",
+                    "value": "Nutrition Calculator"
+                },
+                {
+                    "id": "network_link_5_url",
+                    "type": "text",
+                    "label": "Link 5 URL",
+                    "value": "https://www.mcdonalds.com/us/en-us/about-our-food/nutrition-calculator.html"
+                },
+                {
+                    "id": "network_link_6_label",
+                    "type": "text",
+                    "label": "Link 6 Label",
+                    "value": "Corporate"
+                },
+                {
+                    "id": "network_link_6_url",
+                    "type": "text",
+                    "label": "Link 6 URL",
+                    "value": "https://corporate.mcdonalds.com/"
+                }
+            ]
+        }
+    ]
 }
