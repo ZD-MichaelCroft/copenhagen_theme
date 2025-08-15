@@ -1,89 +1,83 @@
-<section class="hero" role="region" aria-label="{{t 'search'}}">
-  {{#if settings.hero_image}}
-    <div class="hero-media" aria-hidden="true" style="position:absolute; inset:0; z-index:-1; background:
-      linear-gradient(0deg, rgba(255,255,255,0.94), rgba(255,255,255,0.94)),
-      url('{{settings.hero_image}}') center/cover no-repeat;">
-    </div>
-  {{/if}}
+<h1 class="visibility-hidden">{{ help_center.name }}</h1>
 
-  {{#if settings.use_arches_watermark}}
-    {{#if settings.arches_watermark}}
-      <div class="hero__arches" aria-hidden="true" style="
-        position:absolute; inset:0; z-index:-1;
-        background-image:url('{{settings.arches_watermark}}');
-        background-repeat:no-repeat;
-        background-position:right -80px bottom -60px;
-        background-size:420px auto; opacity:0.08; pointer-events:none;">
-      </div>
-    {{/if}}
-  {{/if}}
-
-  <div class="hero__inner">
-    <h1 class="hero__title">{{help_center.name}}</h1>
-    <p class="hero__subtitle">{{t 'search_placeholder'}}</p>
-    <form role="search" class="search" action="{{search_path}}" accept-charset="UTF-8">
-      <input name="utf8" type="hidden" value="✓">
-      <input type="search" name="query" id="home_query" placeholder="{{t 'search'}}" aria-label="{{t 'search'}}">
-      <button class="button" type="submit">{{t 'search'}}</button>
-    </form>
+<section id="main-content" class="section hero">
+  <div class="hero-inner">
+    <h2 class="visibility-hidden">{{ t 'search' }}</h2>
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
+      <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
+      <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
+    </svg>
+    {{search submit=false instant=settings.instant_search class='search search-full'}}
   </div>
 </section>
 
-<main class="container">
-  {{#if settings.show_network_links}}
-  <section class="network" aria-label="McDonald's network links">
-    <h2 class="section-title">McDonald's Network</h2>
-    <ul class="network-links">
-      {{#if settings.network_link_1_label}}{{#if settings.network_link_1_url}}
-      <li><a class="network-link" href="{{settings.network_link_1_url}}">{{settings.network_link_1_label}}</a></li>
-      {{/if}}{{/if}}
-
-      {{#if settings.network_link_2_label}}{{#if settings.network_link_2_url}}
-      <li><a class="network-link" href="{{settings.network_link_2_url}}">{{settings.network_link_2_label}}</a></li>
-      {{/if}}{{/if}}
-
-      {{#if settings.network_link_3_label}}{{#if settings.network_link_3_url}}
-      <li><a class="network-link" href="{{settings.network_link_3_url}}">{{settings.network_link_3_label}}</a></li>
-      {{/if}}{{/if}}
-
-      {{#if settings.network_link_4_label}}{{#if settings.network_link_4_url}}
-      <li><a class="network-link" href="{{settings.network_link_4_url}}">{{settings.network_link_4_label}}</a></li>
-      {{/if}}{{/if}}
-
-      {{#if settings.network_link_5_label}}{{#if settings.network_link_5_url}}
-      <li><a class="network-link" href="{{settings.network_link_5_url}}">{{settings.network_link_5_label}}</a></li>
-      {{/if}}{{/if}}
-
-      {{#if settings.network_link_6_label}}{{#if settings.network_link_6_url}}
-      <li><a class="network-link" href="{{settings.network_link_6_url}}">{{settings.network_link_6_label}}</a></li>
-      {{/if}}{{/if}}
-    </ul>
-  </section>
-  {{/if}}
-
-  {{#if categories}}
-    <ul class="category-list blocks">
-      {{#each categories}}
-        <li class="blocks-item category">
-          <a href="{{url}}">
-            <h2 class="blocks-item-title">{{name}}</h2>
-            <p class="blocks-item-description">{{excerpt description}}</p>
-          </a>
-        </li>
-      {{/each}}
-    </ul>
-  {{/if}}
-
-  {{#if promoted_articles}}
-    <section class="promoted-articles">
-      <h2 class="section-title">{{t 'promoted_articles'}}</h2>
-      <ul class="article-list">
-        {{#each promoted_articles}}
-          <li class="article-list-item">
-            <a href="{{url}}">{{title}}</a>
-          </li>
+<div class="container">
+  <section class="section knowledge-base">
+    <h2 class="visibility-hidden">{{ t 'categories' }}</h2>
+    <section class="categories blocks">
+      <ul class="blocks-list">
+        {{#each categories}}
+          {{#if ../has_multiple_categories}}
+            <li class="blocks-item">
+              <a href='{{url}}' class="blocks-item-link">
+                <span class="blocks-item-title">{{name}}</span>
+                <span class="blocks-item-description">{{excerpt description}}</span>
+              </a>
+            </li>
+          {{else}}
+            {{#each sections}}
+              <li class="blocks-item">
+                <a href='{{url}}' class="blocks-item-link">
+                  <span class="blocks-item-title">
+                    {{name}}
+                  </span>
+                  <span class="blocks-item-description">{{excerpt description}}</span>
+                </a>
+              </li>
+            {{/each}}
+          {{/if}}
         {{/each}}
       </ul>
+      {{pagination}}
+    </section>
+
+    {{#if promoted_articles}}
+      <section class="articles">
+        <h2>{{t 'promoted_articles'}}</h2>
+        <ul class="article-list promoted-articles">
+          {{#each promoted_articles}}
+            <li class="promoted-articles-item">
+                <a href="{{url}}">
+                  {{title}}
+
+                  {{#if internal}}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16" class="icon-lock" title="{{t 'internal'}}">
+                      <rect width="12" height="9" x="2" y="7" fill="currentColor" rx="1" ry="1"/>
+                      <path fill="none" stroke="currentColor" d="M4.5 7.5V4a3.5 3.5 0 017 0v3.5"/>
+                    </svg>
+                  {{/if}}
+                </a>
+            </li>
+          {{/each}}
+        </ul>
+      </section>
+    {{/if}}
+  </section>
+
+  {{#if help_center.community_enabled}}
+    <section class="section home-section community">
+      <h2>{{t 'community'}}</h2>
+      {{#link 'community' class='community-link'}}
+        {{t 'join_conversation'}}
+      {{/link}}
+
+      <div class="community-image"></div>
     </section>
   {{/if}}
-</main>
+
+  <section class="section home-section activity">
+    {{#if settings.show_recent_activity}}
+      {{recent_activity}}
+    {{/if}}
+  </section>
+</div>
