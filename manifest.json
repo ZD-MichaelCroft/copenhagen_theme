@@ -112,6 +112,105 @@
             ]
         },
         {
+            "label": "Knowledge Base & Community",
+            "variables": [
+                {
+                    "identifier": "scoped_kb_search",
+                    "type": "checkbox",
+                    "label": "Scope KB Search to current category/section",
+                    "value": false
+                },
+                {
+                    "identifier": "scoped_community_search",
+                    "type": "checkbox",
+                    "label": "Scope Community Search to current topic",
+                    "value": false
+                },
+                {
+                    "identifier": "show_follow_section",
+                    "type": "checkbox",
+                    "label": "Show Follow button on section page",
+                    "value": true
+                },
+                {
+                    "identifier": "show_follow_topic",
+                    "type": "checkbox",
+                    "label": "Show Follow button on community topic page",
+                    "value": true
+                },
+                {
+                    "identifier": "show_follow_post",
+                    "type": "checkbox",
+                    "label": "Show Follow button on community post page",
+                    "value": true
+                },
+                {
+                    "identifier": "show_post_sharing",
+                    "type": "checkbox",
+                    "label": "Show share controls on community posts",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "label": "Article Settings",
+            "variables": [
+                {
+                    "identifier": "show_articles_in_section",
+                    "type": "checkbox",
+                    "label": "Show article list in section sidebar",
+                    "value": true
+                },
+                {
+                    "identifier": "show_article_author",
+                    "type": "checkbox",
+                    "label": "Show article author",
+                    "value": true
+                },
+                {
+                    "identifier": "show_follow_article",
+                    "type": "checkbox",
+                    "label": "Show Follow button on article page",
+                    "value": true
+                },
+                {
+                    "identifier": "show_article_sharing",
+                    "type": "checkbox",
+                    "label": "Show share controls on articles",
+                    "value": true
+                },
+                {
+                    "identifier": "show_article_comments",
+                    "type": "checkbox",
+                    "label": "Show article comments",
+                    "value": true
+                },
+                {
+                    "identifier": "show_recently_viewed_articles",
+                    "type": "checkbox",
+                    "label": "Show Recently Viewed",
+                    "value": true
+                },
+                {
+                    "identifier": "show_related_articles",
+                    "type": "checkbox",
+                    "label": "Show Related Articles",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "label": "Requests",
+            "variables": [
+                {
+                    "identifier": "request_list_beta",
+                    "type": "checkbox",
+                    "label": "Use requests list beta",
+                    "value": false
+                }
+            ]
+        },
+        {
             "label": "McDonald's Network Links",
             "variables": [
                 {
