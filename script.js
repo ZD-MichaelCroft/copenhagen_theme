@@ -659,3 +659,18 @@
   });
 
 })();
+
+/* McDonald's header shadow on scroll */
+(function () {
+  var header = document.querySelector('.header');
+  if (!header) return;
+  function onScroll() {
+    if (window.scrollY > 4) {
+      header.style.boxShadow = '0 2px 0 0 var(--mc-red)';
+    } else {
+      header.style.boxShadow = 'none';
+    }
+  }
+  document.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
