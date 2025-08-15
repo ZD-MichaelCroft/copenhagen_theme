@@ -34,35 +34,4 @@
 </script>
 
 {{!-- McDonald's brand tokens injected as CSS variables --}}
-<style>
-  :root {
-    --mc-red: {{settings.color_brand_red}};
-    --mc-yellow: {{settings.color_brand_yellow}};
-    --mc-text: {{settings.color_text_primary}};
-    --mc-surface: {{settings.color_surface}};
-    --mc-surface-alt: {{settings.color_surface_alt}};
-    --mc-link: {{settings.color_link}};
-    --mc-radius: {{#if settings.rounded_cards}}14px{{else}}4px{{/if}};
-    --mc-font: {{settings.font_family_stack}};
-  }
-
-  {{#if settings.font_family_custom_url}}
-  @font-face {
-    font-family: "BrandCustom";
-    src: url("{{settings.font_family_custom_url}}") format("woff2");
-    font-display: swap;
-  }
-  {{/if}}
-
-  html, body {
-    background: var(--mc-surface);
-    color: var(--mc-text);
-    font-family: {{#if settings.font_family_custom_url}}"BrandCustom", {{/if}} var(--mc-font);
-  }
-
-  a { color: var(--mc-link); }
-  a:hover, a:focus { color: color-mix(in srgb, var(--mc-link) 88%, black); }
-
-  .footer-grid { display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap; }
-  .list-inline { display:flex; gap:16px; list-style:none; padding:0; margin:0; }
-</style>
+<style> :root { --mc-red: {{settings.brand_color}}; --mc-yellow: {{settings.color_brand_yellow}}; --mc-text: {{settings.text_color}}; --mc-surface: {{settings.background_color}}; /* Use a light McD yellow for alt surfaces; or wire a separate setting if you prefer */ --mc-surface-alt: #FFF8E1; --mc-link: {{settings.link_color}}; --mc-radius: {{#if settings.rounded_cards}}14px{{else}}4px{{/if}}; --mc-font: {{settings.font_family_stack}}; } {{#if settings.font_family_custom_url}} @font-face { font-family: "BrandCustom"; src: url("{{settings.font_family_custom_url}}") format("woff2"); font-display: swap; } {{/if}} html, body { background: var(--mc-surface); color: var(--mc-text); font-family: {{#if settings.font_family_custom_url}}"BrandCustom", {{/if}} var(--mc-font); } a { color: var(--mc-link); } a:hover, a:focus { color: color-mix(in srgb, var(--mc-link) 88%, black); } </style>
