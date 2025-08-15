@@ -2,7 +2,7 @@
     "name": "McDonald's Help Center (Copenhagen Base)",
     "author": "Your Team",
     "version": "1.0.0",
-    "api_version": 2,
+    "api_version": 4,
     "default_locale": "en-us",
     "settings": [
         {
@@ -10,22 +10,22 @@
             "variables": [
                 {
                     "identifier": "logo",
-                    "type": "file",
+                    "type": "image",
                     "label": "Logo"
                 },
                 {
                     "identifier": "favicon",
-                    "type": "file",
+                    "type": "image",
                     "label": "Favicon"
                 },
                 {
                     "identifier": "hero_image",
-                    "type": "file",
+                    "type": "image",
                     "label": "Hero Image"
                 },
                 {
                     "identifier": "arches_watermark",
-                    "type": "file",
+                    "type": "image",
                     "label": "Arches Watermark (SVG/PNG, optional)"
                 },
                 {
