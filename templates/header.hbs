@@ -1,29 +1,11 @@
 <header class="header {{#if settings.sticky_header}}header--sticky{{/if}}" role="banner">
   <div class="container header-inner top-nav">
-    <a class="logo" href="{{home_path}}" aria-label="{{t 'home'}}">
-      {{#if settings.brand_logo}}
-        <img src="{{settings.brand_logo}}" alt="{{help_center.name}}">
+    <a class="logo" href="{{help_center.url}}" aria-label="{{t 'home'}}">
+      {{#if settings.logo}}
+        <img src="{{settings.logo}}" alt="{{help_center.name}}">
       {{else}}
         {{help_center.name}}
       {{/if}}
     </a>
-
-    <nav class="user-nav" aria-label="{{t 'user_profile'}}">
-      {{#if signed_in}}
-        <a href="{{my_activities_path}}">{{t 'my_activities'}}</a>
-        <a href="{{profile_path}}">{{user.name}}</a>
-        {{link 'sign_out'}}
-      {{else}}
-        {{link 'sign_in'}}
-      {{/if}}
-    </nav>
-  </div>
-
-  <div class="container">
-    <form role="search" class="search" action="{{search_path}}" accept-charset="UTF-8">
-      <input name="utf8" type="hidden" value="✓">
-      <input type="search" name="query" id="query" placeholder="{{t 'search'}}" aria-label="{{t 'search'}}" value="{{query}}">
-      <button class="button" type="submit">{{t 'search'}}</button>
-    </form>
   </div>
 </header>

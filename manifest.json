@@ -10,23 +10,27 @@
             "variables": [
                 {
                     "identifier": "logo",
-                    "type": "image",
-                    "label": "Logo"
+                    "type": "file",
+                    "label": "Logo",
+                    "value": "settings/logo.png"
                 },
                 {
                     "identifier": "favicon",
-                    "type": "image",
-                    "label": "Favicon"
+                    "type": "file",
+                    "label": "Favicon",
+                    "value": "settings/favicon.png"
                 },
                 {
                     "identifier": "hero_image",
-                    "type": "image",
-                    "label": "Hero Image"
+                    "type": "file",
+                    "label": "Hero Image",
+                    "value": "settings/hero_image.jpg"
                 },
                 {
                     "identifier": "arches_watermark",
-                    "type": "image",
-                    "label": "Arches Watermark (SVG/PNG, optional)"
+                    "type": "file",
+                    "label": "Arches Watermark (SVG/PNG)",
+                    "value": "settings/arches_watermark.svg"
                 },
                 {
                     "identifier": "use_arches_watermark",
@@ -39,6 +43,36 @@
         {
             "label": "Colors",
             "variables": [
+                {
+                    "identifier": "brand_color",
+                    "type": "color",
+                    "label": "Brand color",
+                    "value": "#DA291C"
+                },
+                {
+                    "identifier": "text_color",
+                    "type": "color",
+                    "label": "Text color",
+                    "value": "#27251F"
+                },
+                {
+                    "identifier": "background_color",
+                    "type": "color",
+                    "label": "Background color",
+                    "value": "#FFFFFF"
+                },
+                {
+                    "identifier": "link_color",
+                    "type": "color",
+                    "label": "Link color",
+                    "value": "#DA291C"
+                },
+                {
+                    "identifier": "visited_link_color",
+                    "type": "color",
+                    "label": "Visited link color",
+                    "value": "#9E1D15"
+                },
                 {
                     "identifier": "color_brand_red",
                     "type": "color",

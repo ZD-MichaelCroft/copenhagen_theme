@@ -3,8 +3,11 @@
     <div class="hero-media" aria-hidden="true" style="position:absolute; inset:0; z-index:-1; background:
       linear-gradient(0deg, rgba(255,255,255,0.94), rgba(255,255,255,0.94)),
       url('{{settings.hero_image}}') center/cover no-repeat;">
+      <div style="font-size:12px;color:#999">Hero URL: {{settings.hero_image}}</div>
+
     </div>
   {{/if}}
+<div style="font-size:12px;color:#999">Hero URL: {{settings.hero_image}}</div>
 
   {{#if settings.use_arches_watermark}}
     {{#if settings.arches_watermark}}
@@ -20,12 +23,7 @@
 
   <div class="hero__inner">
     <h1 class="hero__title">{{help_center.name}}</h1>
-    <p class="hero__subtitle">{{t 'search_placeholder'}}</p>
-    <form role="search" class="search" action="{{search_path}}" accept-charset="UTF-8">
-      <input name="utf8" type="hidden" value="✓">
-      <input type="search" name="query" id="home_query" placeholder="{{t 'search'}}" aria-label="{{t 'search'}}">
-      <button class="button" type="submit">{{t 'search'}}</button>
-    </form>
+    {{search}}
   </div>
 </section>
 
@@ -37,23 +35,18 @@
       {{#if settings.network_link_1_label}}{{#if settings.network_link_1_url}}
       <li><a class="network-link" href="{{settings.network_link_1_url}}">{{settings.network_link_1_label}}</a></li>
       {{/if}}{{/if}}
-
       {{#if settings.network_link_2_label}}{{#if settings.network_link_2_url}}
       <li><a class="network-link" href="{{settings.network_link_2_url}}">{{settings.network_link_2_label}}</a></li>
       {{/if}}{{/if}}
-
       {{#if settings.network_link_3_label}}{{#if settings.network_link_3_url}}
       <li><a class="network-link" href="{{settings.network_link_3_url}}">{{settings.network_link_3_label}}</a></li>
       {{/if}}{{/if}}
-
       {{#if settings.network_link_4_label}}{{#if settings.network_link_4_url}}
       <li><a class="network-link" href="{{settings.network_link_4_url}}">{{settings.network_link_4_label}}</a></li>
       {{/if}}{{/if}}
-
       {{#if settings.network_link_5_label}}{{#if settings.network_link_5_url}}
       <li><a class="network-link" href="{{settings.network_link_5_url}}">{{settings.network_link_5_label}}</a></li>
       {{/if}}{{/if}}
-
       {{#if settings.network_link_6_label}}{{#if settings.network_link_6_url}}
       <li><a class="network-link" href="{{settings.network_link_6_url}}">{{settings.network_link_6_label}}</a></li>
       {{/if}}{{/if}}
